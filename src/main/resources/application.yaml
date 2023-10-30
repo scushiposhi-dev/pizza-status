@@ -1,0 +1,21 @@
+kafka:
+  bootstrap-servers: 'localhost:9092'
+server:
+  port: 8282
+spring:
+  data:
+    jpa:
+      properties:
+        hibernate:
+          show_sql: true
+      hibernate:
+        ddl-auto: create-drop
+        defer-datasource-initialization: true
+    mongodb:
+      uri: 'mongodb://root:example@localhost:27017/status?authSource=admin'
+      #host: localhost
+      #port: 27017
+      #database: status
+      #authentication-database: admin
+      #password: example
+      #username: root

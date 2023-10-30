@@ -1,0 +1,6 @@
+docker exec -it <container> sh
+mongosh mongodb://root:example@localhost:27017/status?authSource=admin
+show dbs           -> check if db status is created, otherwise you can easily create it from mongo-express
+show collections   -> it should be created automatically, otherwise as above
+
+db.runCommand({"convertToCapped": "pizza_status", size: 10240});
